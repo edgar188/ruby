@@ -25,7 +25,7 @@
 # # puts(arr, arr2.length())
 # puts(arr.include? "3".to_i)
 
-# =============================== Assotative Array ===============================
+# =============================== Assotative Array, HASH ===============================
 # countries = {
 #     "armenia" => "Yerevan",
 #     1 => "1111",
@@ -72,7 +72,7 @@
 # end
 
 # users = ["Edgar", "Bob", "Marley", "Kinsey"]
-# res = Array.new()
+# res = []
 
 # for index in 0..users.length() - 1
 #     res[index] = users[index] + " !!!"
