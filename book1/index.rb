@@ -1,3 +1,43 @@
+# ======================== Strings =======================
+
+# s = %{
+#     hello,
+#     world!
+# };
+# p s
+
+# s1 = <<MLP_S
+#     some 
+#     text
+#     ...
+# MLP_S
+# p s1
+
+# def foo
+#     return 100
+# end
+
+# str1 = "foo method res: #{foo}"
+#p str1
+
+# ===================== Regular expressions ========================
+#p "foo_bar_foo".sub("foo", "bar")
+#p "foo_bar_foo".gsub("foo", "bar")
+
+# x = "hello world"
+#p x.sub(/^.../, "OK"); # first 3 char
+#p x.sub(/...$/, "OK"); # last 3 char
+
+# x.scan(/\w/) do |let|
+#     print "#{let},"
+# end
+
+# ----------- Matchin reg-exp ----------------
+
+puts "String has vowels" if "This is a test" =~ /[aeiou]/
+
+
+
 # ====================== Hashes ==========================
 
 user = {
@@ -203,6 +243,6 @@ end
 # p user1["undefined key"]
 
 
-# ======================== Converting Objects to Other Classes ========================
+# ================== Converting Objects to Other Classes ===================
 
-puts 12.to_s.to_i + 12.to_s.to_i
+# puts 12.to_s.to_i + 12.to_s.to_i
