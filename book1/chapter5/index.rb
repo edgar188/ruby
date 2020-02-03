@@ -16,6 +16,7 @@ def area_of_triangle(base_width, height)
     base_width * height / 2
 end
 
+
 # p perimeter_of_square(10)
 # p area_of_square(10)
 # p perimeter_of_triangle(5, 10, 10)
