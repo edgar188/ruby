@@ -1,21 +1,20 @@
 # ====================== Proceduer Programing VS OOP =========================
 
-def perimeter_of_square(side_length)
-    return side_length * 4
-end
+# def perimeter_of_square(side_length)
+#     return side_length * 4
+# end
 
-def area_of_square(side_length)
-    side_length * side_length
-end
+# def area_of_square(side_length)
+#     side_length * side_length
+# end
 
-def perimeter_of_triangle(side1, side2, side3)
-    side1 + side2 + side3
-end
+# def perimeter_of_triangle(side1, side2, side3)
+#     side1 + side2 + side3
+# end
 
-def area_of_triangle(base_width, height)
-    base_width * height / 2
-end
-
+# def area_of_triangle(base_width, height)
+#     base_width * height / 2
+# end
 
 # p perimeter_of_square(10)
 # p area_of_square(10)
@@ -23,40 +22,40 @@ end
 # p area_of_triangle(10, 12)
 
 
-class Shape 
-end
+# class Shape 
+# end
 
-class Square < Shape
-    def initialize(side_length)
-       @side_length = side_length; 
-    end
+# class Square < Shape
+#     def initialize(side_length)
+#        @side_length = side_length; 
+#     end
     
-    def perimeter
-        @side_length * 4
-    end
+#     def perimeter
+#         @side_length * 4
+#     end
 
-    def area
-        @side_length * @side_length
-    end
-end
+#     def area
+#         @side_length * @side_length
+#     end
+# end
 
-class Triangle < Shape
-    def initialize(side1, side2, side3, base_width = 1, height = 1)
-        @side1 = side1
-        @side2 = side2
-        @side3 = side3
-        @base_width = base_width
-        @height = height
-    end
+# class Triangle < Shape
+#     def initialize(side1, side2, side3, base_width = 1, height = 1)
+#         @side1 = side1
+#         @side2 = side2
+#         @side3 = side3
+#         @base_width = base_width
+#         @height = height
+#     end
 
-    def perimeter
-        @side1 + @side2 + @side3
-    end
+#     def perimeter
+#         @side1 + @side2 + @side3
+#     end
 
-    def area
-        @base_width * @height / 2
-    end
-end
+#     def area
+#         @base_width * @height / 2
+#     end
+# end
 
 # my_square = Square.new(10)
 # p my_square.perimeter
@@ -442,19 +441,46 @@ end
 
 # ==================== Using Mix-Ins with Namespaces and Classes ======================
 
-module ToolBox
-    class Ruler
-        attr_accessor :length
+# module ToolBox
+#     class Ruler
+#         attr_accessor :length
+#     end
+# end
+
+# module Country
+#     class Ruler
+#         attr_accessor :name
+#     end
+# end
+
+# include Country
+# a = Ruler.new
+# a.name = "test"
+# p a.name
+
+
+# ======================= Building a Dungeon ==========================
+
+Person = Struct.new(:name, :age, :gender)
+fred = Person.new("Fred", 20, "male")
+
+class Dungeon
+    attr_accessor :player
+    def initialize(player)
+        @player = player
+        @rooms = {}
     end
 end
 
-module Country
-    class Ruler
-        attr_accessor :name
-    end
+Player = Struct.new(:name, :location)
+Room = Struct.new(:reference, :name, :description, :connections)
+
+# x = Player.new("Bob")
+# x.name=("asd")
+# p x.name
+$x = 10
+def t
+    puts x
 end
 
-include Country
-a = Ruler.new
-a.name = "test"
-p a.name
+t()
