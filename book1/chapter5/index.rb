@@ -473,14 +473,18 @@ class Dungeon
 end
 
 Player = Struct.new(:name, :location)
+
 Room = Struct.new(:reference, :name, :description, :connections)
 
-# x = Player.new("Bob")
-# x.name=("asd")
-# p x.name
-$x = 10
-def t
-    puts x
+class Dungeon
+    def add_room(reference, name, description, connections)
+        @rooms[:reference] = Room.new(reference, name, description, connections)
+    end
 end
 
-t()
+my_dungeon = Dungeon.new(fred)
+
+my_dungeon.add_room(:largecave, "Large Cave", "a large cavernous cave", {:west => :smallcave })
+my_dungeon.add_room(:smallcave, "Small Cave", "a small, claustrophobic cave", {:east => :largecave })
+
+puts my_dungeon.player.name
