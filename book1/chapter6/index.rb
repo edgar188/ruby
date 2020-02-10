@@ -542,3 +542,4 @@ my_dungeon.go(:west)
 
 my_dungeon.go(:east)
 
+puts my_dungeon.player.name
