@@ -244,4 +244,24 @@ end
 
 # 10.times { puts sg.resume }
 
-# ======================= RubyInline ============================
+# ======================= ============================
+
+class Fixnum
+    def factorial
+        (1..self).inject do |a, b| 
+            a * b
+        end
+    end
+end
+puts 8.factorial
+
+require 'benchmark'
+    Benchmark.bm do |bm|
+        bm.report('ruby:') do
+        1000.times do
+            8.factorial
+        end
+    end
+end
+
+puts "Hello world".encoding
