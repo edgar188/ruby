@@ -8,8 +8,8 @@ bot_data = {
     ],
     :responses => {
         :default => ["I don't understand.", "What?","Huh?"],
-        :greeting => ["Hi. I'm [name]. Want to chat?"],
-        :farewell => ["Good bye!"],
+        :greeting => ["Hi. I'm [name]. Want to chat?", "Hello. My name is [name]. Want to chat?"],
+        :farewell => ["Good bye [name]!", "Bye, [name]!"],
         'hello' => ["How's it going?", "How do you do?"],
         'i like *' => ["Why do you like *?", "Wow! I like * too!"]
     }

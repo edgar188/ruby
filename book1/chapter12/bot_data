@@ -13,8 +13,10 @@
   - Huh?
   :greeting:
   - Hi. I'm [name]. Want to chat?
+  - Hello. My name is [name]. Want to chat?
   :farewell:
-  - Good bye!
+  - Good bye [name]!
+  - Bye, [name]!
   hello:
   - How's it going?
   - How do you do?
