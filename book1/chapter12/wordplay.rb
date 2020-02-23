@@ -34,7 +34,7 @@ class WordPlay
                 when "my"
                     "your"
             end
-        end.sub(/^me\b/i, 'i')
+        end.sub(/\^me\b/i, 'i')
     end
 end
 
